@@ -1,0 +1,38 @@
+<div
+  class="card"
+  (click)="getCardId(cardId)"
+  [ngClass]="{ active: isActive }"
+  #cardId
+>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-2">
+        <img
+          src="../../../assets/images/ISS_1800.jpg"
+          alt="logo"
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-sm-10">
+        <h5>
+          {{ fair.fairName }}
+        </h5>
+        <p>
+          <i class="fa-solid fa-calendar-days"></i>
+
+          {{ fair.startDate * 1000 | date }} - {{ fair.endDate * 1000 | date }}
+        </p>
+        <a href="javascript:;">Add To Calender</a>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> {{ fair.location.city }},{{
+            fair.location.country
+          }}
+        </p>
+        <p>
+          <i class="fa-solid fa-school"></i>
+          {{ fair.numberOfSchoolsRegistered }} School Registered
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

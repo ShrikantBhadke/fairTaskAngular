@@ -1,0 +1,31 @@
+nav.navbar {
+  padding: 10px 100px;
+  .logoImg {
+    width: 180px;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.mandatory {
+  background-color: rgb(215, 21, 21);
+  color: #fff;
+  padding: 10px 0;
+  p {
+    margin: 0;
+  }
+}
+
+.jobFair {
+  padding: 50px 50px 0 50px;
+  background-image: linear-gradient(
+    to right,
+    rgb(242, 222, 222),
+    rgb(202, 223, 225)
+  );
+  ul {
+    list-style: none;
+  }
+}

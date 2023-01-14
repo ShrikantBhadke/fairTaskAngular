@@ -1,0 +1,39 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <img src="{{ getfair?.bannerUrl }}" alt="cardbg" class="img-fluid" />
+    <div class="content">
+      <h5>
+        {{ getfair?.fairName }}
+      </h5>
+      <p>
+        {{ getfair?.startDate * 1000 | date }} -
+        {{ getfair?.endDate * 1000 | date }}
+      </p>
+      <button class="btn btn-outline-info">Upgrade to Register for Fair</button>
+    </div>
+  </div>
+</div>
+<div class="row p-3 bg-primary rounded mb-4">
+  <div class="col-md-4 bg-white mr-2 rounded">
+    <div class="getdata">
+      <h4><i class="fa-solid fa-calendar-days"></i> Date</h4>
+      <p>{{ getfair?.startDate * 1000 | date }}</p>
+      <p>{{ getfair?.endDate * 1000 | date }}</p>
+      <p>{{ getfair?.fairStartTime }} - {{ getfair?.fairEndTime }}</p>
+      <p>{{ getfair?.timezoneId }}</p>
+      <p><a href="javascript:;">Add To Calender</a></p>
+      <p>
+        Last Registration Date <br />
+        {{ currentDate | date }}
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4 bg-white rounded">
+    <div class="getdata">
+      <h4><i class="fa-solid fa-calendar-days"></i> Date</h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 mb-4" [innerHTML]="getfair?.candidateDescription"></div>
+</div>
